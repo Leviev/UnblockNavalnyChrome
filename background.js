@@ -1,4 +1,14 @@
-var mirror_url = false;
+var mirror_url = makeFallbackUrl();
+
+function makeFallbackUrl() {
+	var text = "";
+	var possible = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+	for( var i=0; i < 5; i++ )
+		text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+	return text+'.fuckrkn.me';
+}
 function setMirror(callback) {
 	var req = new XMLHttpRequest();
 	req.open('GET','http://api.navalny.us',false);
