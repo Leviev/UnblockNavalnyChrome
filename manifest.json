@@ -1,0 +1,18 @@
+{
+	"name": "Актуальный Навальный",
+	"version": "0.1",
+	"author": "navalny.us",
+	"description": "Расширение предназначено для обхода блокировки блога Алексея Навального в ЖЖ путём перенаправления на актуальное зеркало блога.",
+	"short_name": "UnblockNavalny",
+	"permissions": ["webRequest", "webRequestBlocking", "tabs", "cookies",
+					"*://navalny.livejournal.com/*", "*://*.navalny.us/*"],
+	"browser_action": {"default_icon": "navalny48.png"},
+	"icons": {  "16": "navalny16.png",
+				"48": "navalny48.png",
+				"128": "navalny128.png" },
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"homepage_url": "http://navalny.us",
+	"manifest_version": 2
+}
